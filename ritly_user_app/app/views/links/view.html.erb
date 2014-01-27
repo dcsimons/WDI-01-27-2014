@@ -1,0 +1,38 @@
+<%= render partial: "navbar" %>
+<%= render partial: "header" %>
+
+<div class="container narrow move-up">
+	
+	<div class="container border view-table narrow">
+		<div class="container row col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				<h2>Full URL</h2>
+		</div>
+		<div class="container row col-xs-3 col-sm-3 col-md-3 col-lg-3 center">
+				<h2>Ritly</h2>
+		</div>
+		<div class="container row col-xs-3 col-sm-3 col-md-3 col-lg-3 center">
+				<h2>Visits</h2>
+		</div>
+		<div class=" container row col-xs-1 col-sm-1 col-md-1 col-lg-1 center">
+			<h2>Remove</h2>
+		</div>
+	</div>
+
+		<% @links.each do |x| %>
+			<div class="container border view-table narrow">
+				<div class="container row col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<%= x.full_url %>
+				</div>
+				<div class="container row col-xs-3 col-sm-3 col-md-3 col-lg-3 center ritly-display">
+					<%= link_to "#{x.ritly_url}", "/go/#{x.ritly_url}/preview" %>
+				</div>
+				<div class="container row col-xs-3 col-sm-3 col-md-3 col-lg-3 center visit-display">
+					<%= x.visits %>
+				</div>
+				<div class="container row col-xs-1 col-sm-1 col-md-1 col-lg-1 center">
+					<%= button_to "Delete Ritly", "/go/#{x.id}", class: "btn btn-danger", method: :delete, confirm: "Confirm removing ritly #{x.ritly_url} from database?" %>
+				</div>
+			</div>
+
+		<% end %>
+</div>

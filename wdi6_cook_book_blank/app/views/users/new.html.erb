@@ -1,0 +1,22 @@
+<h1>Sign up</h1>
+
+<div class="row">
+    <div class="span6 offset3">
+
+        <%= form_for(@user) do |f| %>
+        	<%= f.label "Name:" %>
+        	<%= f.text_field :name, placeholder: "e.g., John Doe" %><br><br>
+
+        	<%= f.label "Email:" %>
+        	<%= f.text_field :email, placeholder: "Enter Valid Email" %><br><br>
+
+        	<%= f.label "Password:" %>
+        	<%= f.password_field :password %><br><br>
+
+        	<%= f.label "Confirm Password:" %>
+        	<%= f.password_field :password_confirmation %><br><br>
+        	<%= f.submit "Create my account", class: "btn btn-lg btn-primary" %>
+        <% end %>
+
+    </div>
+</div>

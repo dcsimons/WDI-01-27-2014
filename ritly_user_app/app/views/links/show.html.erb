@@ -1,0 +1,18 @@
+<%= render partial: "navbar" %>
+<%= render partial: "header" %>
+
+<div class="container preview-display">
+
+	<div>
+		Your Ritly is: <%= link_to "#{@link.ritly_url}", "/go/#{@link.ritly_url}", method: :patch, class: "bolden ritl-font" %>
+	</div>
+	<div>
+		Number of visits: <%= @link.visits %>
+	</div>
+	<div>
+		Go to <%= link_to "#{@link.ritly_url}", "/go/#{@link.ritly_url}", method: :patch, class: "bolden ritl-font" %> to visit your URL
+	</div>
+	<div>
+		<iframe class="fragment" src=<%= "#{@link.full_url}" %>></iframe>
+	</div>
+</div>

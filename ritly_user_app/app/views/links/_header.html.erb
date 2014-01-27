@@ -1,0 +1,16 @@
+<div class="jumbotron jmbtrn-style">
+	<div class="container header-container center">
+
+
+		<h1 class="ritl-font">Ritl Me This</h1>
+
+		<div>
+		<%= form_for :link, url: "/go", method: :post do |f| %>
+		    <%= f.label " http://", class: "label" %>
+		    <%= f.text_field :full_url, placeholder: "www.domain.com", class: "input-field" %>
+		    
+		    <%= f.submit "Ritlyize", class: "btn btn-lg btn-primary btn-header" %>
+		<% end %>
+		</div>
+	</div>
+</div>
