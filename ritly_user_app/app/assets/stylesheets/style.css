@@ -26,6 +26,45 @@ body {
 	border-radius: 3px;
 }
 
+.signup-container {
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	border-radius: 3px;
+	margin-top: 50px;
+}
+
+.signup-header {
+	font-family: 'Mystery Quest', cursive;
+	font-size: 50px;
+}
+
+.signup-label {
+	font-size: 25px;
+	font-weight: normal;
+}
+
+.signup-field {
+	width: 450px;
+	font-size: 25px;
+	border: 0;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+
+.signup-btn {
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+.signup-now {
+	font-size: 25px;
+}
+
+.profile-label {
+	color: white;
+	font-size: 40px;
+}
+
 .ritl-font {
 	font-family: 'Mystery Quest', cursive;
 }
